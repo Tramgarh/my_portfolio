@@ -11,8 +11,8 @@ const CHIPS = [
   "AI automation pricing",
 ];
 
-// const OR_KEY = "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";
-const OR_KEY = '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'; // new one
+const OR_KEY = "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";
+// const OR_KEY = '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'; // new one
 const OR_MODEL = "meta-llama/llama-3-70b-instruct";
 
 /* ─── PORTFOLIO KNOWLEDGE BASE ───────────────────────── */
