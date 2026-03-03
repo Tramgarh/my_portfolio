@@ -77,32 +77,12 @@ const AIChat = () => {
     setInput("");
     setBusy(true);
     try {
-       console.log('Using API Key starting with:', OR_KEY.substring(0, 15) + '...');
-  
-  const apiMsgs = history.map(m=>({role:m.role,content:m.text}));
-  const res = await fetch("https://openrouter.ai/api/v1/chat/completions",{
-    method:"POST",
-    headers: {
-      "Authorization": `Bearer ${OR_KEY}`,
-      "Content-Type": "application/json",
-      "HTTP-Referer": window.location.origin,
-      "X-Title": "Portfolio AI"
-    },
-    body:JSON.stringify({
-      model:OR_MODEL,
-      max_tokens:500,
-      temperature:0.7,
-      messages:[{role:"system",content:SYSTEM_PROMPT},...apiMsgs]
-    }),
-  });
-  
-  console.log('Response status:', res.status);
-  
-  if (!res.ok) {
-    const errorText = await res.text();
-    console.error('Error response:', errorText);
-    throw new Error(`API responded with status ${res.status}`);
-  }
+        const apiMsgs = history.map(m=>({role:m.role,content:m.text}));
+        const res = await fetch("https://openrouter.ai/api/v1/chat/completions",{
+          method:"POST",
+          headers:{"Authorization":`Bearer ${OR_KEY}`,"Content-Type":"application/json","HTTP-Referer":"https://portfolio.dev","X-Title":"Portfolio AI"},
+          body:JSON.stringify({model:OR_MODEL,max_tokens:500,temperature:0.7,messages:[{role:"system",content:SYSTEM_PROMPT},...apiMsgs]}),
+        });
         const data = await res.json();
         const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't respond. Please email: developer@email.com";
         setMsgs(prev=>[...prev,{role:"assistant",text:reply}]);
