@@ -1,4 +1,18 @@
 import { IC } from "./IC"
+import LP1 from '../assets/LP/LP_1.PNG'
+import LP2 from '../assets/LP/LP_2.PNG'
+import LP3 from '../assets/LP/LP_3.PNG'
+import LP4 from '../assets/LP/LP_4.PNG'
+import LP5 from '../assets/LP/LP_5.PNG'
+import Saas1 from '../assets/SaaS/Screenshot (33).png'
+import Saas2 from '../assets/SaaS/Screenshot (34).png'
+import Saas3 from '../assets/SaaS/Screenshot (36).png'
+import Saas4 from '../assets/SaaS/Screenshot (37).png'
+import Saas5 from '../assets/SaaS/Screenshot (38).png'
+import Saas6 from '../assets/SaaS/Screenshot (39).png'
+import Saas7 from '../assets/SaaS/Screenshot (40).png'
+import wkf_replier from '../assets/n8n_replier.PNG'
+import wkf_LP from '../assets/LP_workflow.PNG'
 
 export const readyProjects = [
     {
@@ -9,13 +23,13 @@ export const readyProjects = [
         stack: ["React.js", "Node.js", "MongoDB", "Firebase", "Stripe", "JWT", "Tailwind"],
         C: IC.Lock,
         images: [
-            "/src/assets/SaaS/Screenshot (33).png",
-            "/src/assets/SaaS/Screenshot (34).png",
-            "/src/assets/SaaS/Screenshot (36).png",
-            "/src/assets/SaaS/Screenshot (37).png",
-            "/src/assets/SaaS/Screenshot (38).png",
-            "/src/assets/SaaS/Screenshot (39).png",
-            "/src/assets/SaaS/Screenshot (40).png",
+            Saas1,
+            Saas2,
+            Saas3,
+            Saas4,
+            Saas5,
+            Saas6,
+            Saas7
         ],
         color: "#e8f4f0",
         accent: "#2d6a4f",
@@ -28,11 +42,11 @@ export const readyProjects = [
         desc: "Service-oriented landing with dynamic CMS, multi-step lead capture, Nodemailer email automation, testimonial management, and SEO optimization.",
         stack: ["React.js", "Express.js", "MongoDB", "Nodemailer", "Tailwind"],
         images: [
-            "/src/assets/LP/LP_1.PNG",
-            "/src/assets/LP/LP_2.PNG",
-            "/src/assets/LP/LP_3.PNG",
-            "/src/assets/LP/LP_4.PNG",
-            "/src/assets/LP/LP_5.PNG",
+            LP1,
+            LP2,
+            LP3,
+            LP4,
+            LP5,
         ],
         C: IC.Monitor,
         color: "#fef4e8",
@@ -47,7 +61,7 @@ export const workflows = [
         desc: "Message detection → AI classification → response generation → delivery → lead scoring → CRM update",
         C: IC.Cog,
         images: [
-            "/src/assets/n8n_replier.PNG",
+            wkf_replier,
         ],
         steps: ["Incoming Msg", "AI clean", "Generate Reply", "Deliver", "Score", "CRM Sync"],
         color: "#f0ecf8",
@@ -58,7 +72,7 @@ export const workflows = [
         desc: "Message detection → classification → response generation → delivery → lead scoring → CRM update",
         C: IC.Cog,
         images: [
-            "/src/assets/LP_workflow.PNG",
+            wkf_LP,
         ],
         steps: ["Incoming Msg", "Classify", "Generate Reply", "Deliver", "Score", "CRM Sync"],
         color: "#f0ecf8",
@@ -78,16 +92,16 @@ export const upcomingProjects = [
         accent: "#6d4fc7",
         pct: 2
     },
-    { 
-        name: "Integrated Maps + Social + E-commerce Platform", 
-        tag: "Local discovery meets social commerce.", 
-        desc: "Geo-social commerce: merges local discovery, social feeds, and instant purchasing. Discover vendors on a map, follow their updates, read community reviews, order with real-time tracking.", 
-        concept: "Location, social trust, and e-commerce in one platform — empowering local businesses to thrive digitally.", 
-        stack: ["Map Box API", "React Js", "Node.js", "MongoDB", "Redis", "Socket.io"], 
-        C: IC.Cart, 
-        color: "#e8f4f0", 
-        accent: "#2d6a4f", 
-        pct: 20 
+    {
+        name: "Integrated Maps + Social + E-commerce Platform",
+        tag: "Local discovery meets social commerce.",
+        desc: "Geo-social commerce: merges local discovery, social feeds, and instant purchasing. Discover vendors on a map, follow their updates, read community reviews, order with real-time tracking.",
+        concept: "Location, social trust, and e-commerce in one platform — empowering local businesses to thrive digitally.",
+        stack: ["Map Box API", "React Js", "Node.js", "MongoDB", "Redis", "Socket.io"],
+        C: IC.Cart,
+        color: "#e8f4f0",
+        accent: "#2d6a4f",
+        pct: 20
     },
 
 ]

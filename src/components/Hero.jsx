@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { IC } from "../utils/IC";
+import profileImg from "../../profile_img.jpg"
 
 
 const Hero = () => {
@@ -27,7 +28,7 @@ const Hero = () => {
               <div style={{ width: 236, height: 274, borderRadius: 22, background: "linear-gradient(145deg,#ebe7e2,#d4cfc8)", boxShadow: "0 16px 56px rgba(0,0,0,0.12),0 0 0 1px rgba(255,255,255,0.7)", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
                 {/* Profile Image - Added here */}
                 <img
-                  src="../../profile_img.jpg"
+                  src={profileImg}
                   alt="Developer Profile"
                   style={{
                     width: '100%',
